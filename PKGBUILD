@@ -16,7 +16,7 @@
 
 _langname="python"
 _relname="glyphsLib"
-_pacmname="glyphslib"
+_pacname="glyphslib"
 
 pkgname="${_langname}-${_pacname}"
 pkgver=6.0.4
@@ -42,9 +42,6 @@ depends=(
 makedepends=(
   "python-defcon"
   "python-setuptools-scm"
-)
-_pycheckdeps=(
-
 )
 checkdepends=(
   # For fonttools [lxml]
@@ -76,14 +73,14 @@ build() {
 
 # check() {
 
-#  cd "$_zipname"
+#   cd "$_zipname"
 
-  # skipped tests require ufo2ft, a circular dependency which might be on older version than expected when this is built against Arch packages
+#   # skipped tests require ufo2ft, a circular dependency which might be on older version than expected when this is built against Arch packages
 
-  # [FixMe]: AssertionError: *.designspace file is different from expected
-#  PYTHONPATH=Lib pytest tests \
-#    --deselect tests/builder/builder_test.py
-#}
+#   # [FixMe]: AssertionError: *.designspace file is different from expected
+#   PYTHONPATH=Lib pytest tests \
+#     --deselect tests/builder/builder_test.py
+# }
 
 package() {
 
